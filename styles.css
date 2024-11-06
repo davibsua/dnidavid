@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-
 body {
-    background: linear-gradient(135deg, #0066ff, #33ccff);
-    height: 100%;
+    background: linear-gradient(135deg, aquamarine, #287e74);
+    background-size: 400% 400%;
+    
 }
+
+
+
 
 .subtitle {
     color: darkblue;
