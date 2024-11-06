@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 body {
-    background-color: aquamarine;
+    background: linear-gradient(135deg, #0066ff, #33ccff);
     height: 100%;
 }
 
