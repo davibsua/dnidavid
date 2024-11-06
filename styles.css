@@ -1,9 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+
 body {
-    background: linear-gradient(135deg, aquamarine, #287e74);
+    background: linear-gradient(-45deg, aquamarine, #77ecdf, #66c0e9, #4b8dc6);
     background-size: 400% 400%;
-    
+    animation: gradientAnimation 10s ease infinite;
 }
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
 
 
 
