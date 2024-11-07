@@ -13,7 +13,7 @@ body {
 }
 
 .subtitle {
-    color: darkblue;
+    color: rgb(55, 55, 55);
     text-align: left;
     font-size: 30px;
     padding-left: 50px; 
@@ -24,7 +24,7 @@ body {
 }
 
 .element {
-    color: black;
+    color: rgb(1, 1, 90);
     font-size: 20px;
     transition: color 0.3s ease, transform 0.3s ease;
     font-family: 'Montserrat', sans-serif; 
@@ -159,25 +159,55 @@ body {
     height: fit-content;
 }
 
-.text-container {
-    background-color: grey;
-    padding: 25px;
-    border-radius: 25px; 
-    max-width: 40%;
-    flex-shrink: 0;
-    text-align: left;
-    font-size: 25px; 
-    font-family: sans-serif; 
-    font-weight: bold;
-}
-
 .container {
     display: flex;
     justify-content: space-between;
-    align-items: top;           
-    height: 100%;              
+    align-items: top;
+    height: 100%;
     padding: 0 5%;
+    position: relative; /* Necesario para el pseudo-elemento */
 }
+
+.text-container {
+    position: relative; /* Asegura que el contenido no se vea afectado por el pseudo-elemento */
+    background-color: rgba(0, 0, 0, 0); /* Fondo transparente */
+    padding: 25px;
+    border-radius: 25px;
+    max-width: 40%;
+    flex-shrink: 0;
+    text-align: left;
+    font-size: 25px;
+    font-family: sans-serif;
+    font-weight: bold;
+    border: 15px solid rgb(100, 99, 99, 0.5); /* Borde visible */
+    z-index: 1; /* Asegura que el contenido esté encima del fondo */
+}
+
+/* El pseudo-elemento para el fondo con desenfoque */
+.text-container::before {
+    content: ''; /* Necesario para generar el pseudo-elemento */
+    position: absolute; /* Posicionamos el fondo */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(-45deg, aquamarine, #77ecdf, #66c0e9, #4b8dc6); /* Fondo con gradiente */
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite; /* Animación de cambio de colores */
+    filter: blur(10px); /* Aplicamos el desenfoque solo al fondo */
+    border-radius: 25px; /* Asegura que el fondo tenga bordes redondeados */
+    z-index: -1; /* Asegura que el fondo se quede detrás del contenido */
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+
+
 
 #main-container {
     display: flex;
@@ -218,12 +248,13 @@ body {
     text-align: center;         
     font-family: sans-serif;      
     border-radius: 10px;          
-    margin-top: 5px;            
+    margin-top: 8px;   
+    margin-left: 5px;         
     padding: 20px;              
     align-items: center;          
     justify-content: center;  
     display: inline-block;     
-    border: 15px dashed grey;  /* Borde blanco con estilo outset */
+    border: 15px dashed rgb(128, 128, 128, 0.7); 
 }
 
 #webgrafia{
