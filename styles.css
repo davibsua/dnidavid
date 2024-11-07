@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-
 body {
     background: linear-gradient(-45deg, aquamarine, #77ecdf, #66c0e9, #4b8dc6);
     background-size: 400% 400%;
@@ -12,10 +11,6 @@ body {
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
-
-
-
-
 
 .subtitle {
     color: darkblue;
@@ -216,22 +211,19 @@ body {
     border-radius: 8px;
 }
 
-
-
 .titulo {
     display: flex;               
-    color: blue;                
+    color: rgb(55, 55, 55);                
     font-size: 50px;             
     text-align: center;         
     font-family: sans-serif;      
-    animation: fadeIn 1s ease-out; 
-    border: 15px outset rgb(94, 156, 232);
     border-radius: 10px;          
     margin-top: 5px;            
     padding: 20px;              
     align-items: center;          
     justify-content: center;  
     display: inline-block;     
+    border: 15px dashed grey;  /* Borde blanco con estilo outset */
 }
 
 #webgrafia{
@@ -246,6 +238,7 @@ body {
     font-weight: bold;
     font-size:30px;
 }
+
 #content-webgrafia{
     display: flex;
     justify-content: space-between;
@@ -253,9 +246,9 @@ body {
     width: auto;
     height: auto;
 }
+
 #container-webgrafia{
     display: flex;
     justify-content:center;
     align-items: center;           
-                
 }
