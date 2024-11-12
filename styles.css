@@ -75,6 +75,16 @@ body {
     transform: translateY(3px);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
+.next:hover{
+    transform: scale(1.1);
+}
+.anterior:hover {
+    transform: scale(1.1); 
+}
+.exit:hover {
+    transform: scale(1.1); 
+}
+
 
 .anterior {
     position: fixed;
