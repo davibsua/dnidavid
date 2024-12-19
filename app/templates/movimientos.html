@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movimientos</title>
+    <link rel="stylesheet" href="{% static 'app/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Movimientos:</h1>
+        
+        <!-- Lista de movimientos -->
+        <ul>
+            {% for movimiento in lines %}
+                <li>{{ movimiento }}</li>
+            {% endfor %}
+        </ul>
+
+        <!-- Botones de navegación -->
+        <div class="navigation-buttons">
+            <a href="{% url 'index' %}" class="button">Volver al índice</a>
+            <a href="{% url 'logout' %}" class="button logout-button">Cerrar sesión</a>
+        </div>
+    </div>
+</body>
+</html>

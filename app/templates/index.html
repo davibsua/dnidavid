@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Gastos</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'app/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Gestor de Gastos</h1>
+        <p>Bienvenido</p>
+        <p>Saldo actual: ${{ saldo }}</p>
+
+        <div class="buttons">
+            <a href="{% url 'ingreso' %}" class="button">Ingreso</a>
+            <a href="{% url 'retiro' %}" class="button">Retiro</a>
+            <a href="{% url 'movimientos' %}" class="button">Movimientos</a>
+            <a href="{% url 'ingreso_programado' %}" class="button">Ingreso Programado</a>
+            <a href="{% url 'retiro_programado' %}" class="button">Retiro Programado</a>
+            <a href="{% url 'datos' %}" class="button">Datos</a>
+        </div>
+
+        <a href="{% url 'login' %}" class="logout-button">Cerrar sesión</a>
+    </div>
+</body>
+</html>

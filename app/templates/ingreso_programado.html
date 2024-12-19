@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ingreso Programado</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'app/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Programar un ingreso</h1>
+        {% if nuevo_saldo %}
+            <p>Ingreso realizado con éxito. Tu nuevo saldo es: <strong>{{ nuevo_saldo }}</strong></p>
+        {% endif %}
+        <form method="post">
+            {% csrf_token %}
+            <label for="fecha">Selecciona la fecha:</label>
+            {{ form.as_p }}
+            <br>
+            <label for="monto">Monto a ingresar:</label>
+            {{ mform.as_p }}
+            <button type="submit">Programar ingreso</button>
+        </form>
+        <div class="navigation-buttons">
+            <a href="{% url 'index' %}">Volver al inicio</a>
+        </div>
+    </div>
+</body>
+</html>
