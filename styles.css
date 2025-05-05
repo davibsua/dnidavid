@@ -200,6 +200,7 @@ main {
     display: flex; 
     justify-content: center;
     margin: 16px 0;
+    font-size: 0.5rem; 
 }
 
 .footer-azul{
@@ -336,4 +337,8 @@ footer p{
 .images{
     width: 1rem;
     height: 1rem;
+}
+
+footer{
+    max-height: 15%; 
 }
