@@ -317,7 +317,7 @@ footer p{
     text-decoration: none;
     padding: 10px; 
     border-radius: 7px; 
-    width: 90%;
+    width: 70%;
     text-align: center; 
 }
 
@@ -332,8 +332,11 @@ footer p{
 }
 
 .dnifoto{
-    max-width:fit-content;
-    max-height: fit-content;
+    max-width: 60%;
+    max-height: 35%;
+    display: block;
+    margin: 20px auto;
+
     
 }
 
@@ -357,3 +360,15 @@ body, h2, p {
     color: rgb(133, 132, 132); 
     
 }
+
+/* Elimina el efecto gris oscuro al pulsar en iOS y Android */
+a, button {
+    -webkit-tap-highlight-color: transparent;
+    -webkittap-highlight-color: transparent; /* estándar */
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* por compatibilidad */
+  }
+
+a:focus, button:focus {
+    outline: none;
+  }
+  
