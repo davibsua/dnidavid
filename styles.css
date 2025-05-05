@@ -84,11 +84,12 @@ main {
     justify-content: flex-start !important;
     padding: 12px 20px;
     color: black;
-    background-color: rgba(218, 218, 218, 0.904); 
+    background-color: rgba(241, 241, 241, 0.904); 
     text-decoration: none; 
     border-radius: 8px; 
-    margin-top: 15px; 
-    width: 90%;
+    margin-top: 1rem; 
+    width: 70%;
+    height: 10%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -111,10 +112,10 @@ main {
     background-color: rgba(218, 218, 218, 0.904);
     border-radius: 20px; 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    width: 20%;
+    width: auto;
     white-space: nowrap;
-    padding: 15px; 
-    margin: 20px auto; 
+    padding: 10px; 
+    margin: 0 auto; 
     text-align: center;
 }
 .container {
@@ -123,7 +124,8 @@ main {
     align-items: center;    /* centrar horizontalmente */
     justify-content: center; /* centrar verticalmente */
     height: 50vh; /* ocupar toda la altura de la pantalla */
-    text-align: center; /* centrar el texto dentro de los <a> */
+    text-align: center; 
+    /* centrar el texto dentro de los <a> */
 
   }
   
@@ -199,7 +201,7 @@ main {
     color:rgba(134, 134, 134, 0.904);
     display: flex; 
     justify-content: center;
-    margin: 16px 0;
+    margin: auto;
     font-size: 0.5rem; 
 }
 
@@ -227,8 +229,8 @@ footer {
 
 footer p{
     margin: 12px 0; 
+    font-size: 0.6rem;
 }
-
 
 
 
@@ -253,7 +255,7 @@ footer p{
     cursor: pointer;
 }
 .container-gris p {
-    margin: 7px 0;  /* Reduce el espacio vertical */
+    margin: 6px 0;  /* Reduce el espacio vertical */
     padding: 0;     /* Elimina padding extra si lo hay */
 }
 #minombre{
@@ -330,7 +332,8 @@ footer p{
 }
 
 .dnifoto{
-    margin-left:10rem;
+    max-width:fit-content;
+    max-height: fit-content;
     
 }
 
@@ -341,4 +344,16 @@ footer p{
 
 footer{
     max-height: 15%; 
+}
+
+body, h2, p {
+    margin: 0;
+    padding: 0;
+}
+.subtitle{
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 1rem; 
+    color: rgb(133, 132, 132); 
+    
 }
