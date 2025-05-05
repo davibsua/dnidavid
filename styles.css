@@ -246,10 +246,12 @@ footer p{
 .container-gris{
     color: black; 
     background-color: rgb(243, 242, 247);
-    margin: 2rem; 
+    margin:1rem;
+    margin-bottom:auto; 
     padding: 1rem; 
     border-radius: 11px; 
     box-shadow: 0 0 20px rgb(0, 0, 0, 0.4);
+    max-height: 60%;
 }
 .container-gris:hover{
     cursor: pointer;
@@ -317,8 +319,10 @@ footer p{
     text-decoration: none;
     padding: 10px; 
     border-radius: 7px; 
-    width: 79%;
+    width: 80%;
     text-align: center; 
+    margin: 0 auto; 
+    
 }
 
 #atras{
@@ -332,10 +336,12 @@ footer p{
 }
 
 .dnifoto{
-    max-width: 70%;
-    max-height: 40%;
+    width: 80%;
+    height: 50%;
+    max-width: none;
+    max-height: none;
     display: block;
-    margin: 20px auto;  
+    margin: auto;  
 
     
 }
@@ -370,5 +376,13 @@ a, button {
 
 a:focus, button:focus {
     outline: none;
+  }
+  
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
   }
   
