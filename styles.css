@@ -317,7 +317,7 @@ footer p{
     text-decoration: none;
     padding: 10px; 
     border-radius: 7px; 
-    width: 70%;
+    width: 79%;
     text-align: center; 
 }
 
@@ -332,10 +332,10 @@ footer p{
 }
 
 .dnifoto{
-    max-width: 60%;
-    max-height: 35%;
+    max-width: 70%;
+    max-height: 40%;
     display: block;
-    margin: 20px auto;
+    margin: 20px auto;  
 
     
 }
