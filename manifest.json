@@ -1,0 +1,16 @@
+{
+    "name": "miDNI",
+    "short_name": "miDNI",
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#ffffff",
+    "icons": [
+      {
+        "src": "images/logo-principal.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      }
+    ]
+  }
+      
