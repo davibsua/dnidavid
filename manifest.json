@@ -1,8 +1,8 @@
 {
   "name": "miDNI",
   "short_name": "miDNI",
-  "start_url": "/",
-  "scope": "/",
+  "start_url": "./index.html",
+  "scope": "./",
   "display": "standalone",
   "background_color": "#f0f7ff",
   "theme_color": "#f0f7ff",
