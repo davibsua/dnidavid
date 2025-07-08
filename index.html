@@ -7,9 +7,9 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="manifest" href="/manifest.json">
   <link rel="apple-touch-icon" href="icons/logo192.png">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <meta name="apple-mobile-web-app-title" content="miDNI">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="miDNI" />
 </head>
 
 <body>
@@ -49,7 +49,7 @@
     <p class="footer-azul">Aviso legal</p>
   </footer>
 
-  <!-- ✅ Poner aquí el script del Service Worker -->
+  <!-- Service Worker -->
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/service-worker.js')

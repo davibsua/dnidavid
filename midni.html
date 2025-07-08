@@ -10,17 +10,14 @@
   <link rel="manifest" href="/manifest.json" />
   <link rel="apple-touch-icon" href="icons/logo192.png" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="apple-mobile-web-app-title" content="miDNI" />
 </head>
 <body>
   
-  <a id="atras" href="javascript:history.back()">
-    <span class="material-icons" style="vertical-align: middle; font-size: 20px; margin-right: 6px;">
-      arrow_back_ios
-    </span>
-    Atrás
-  </a>
+  <button id="btnBack" aria-label="Atrás" style="all:unset; cursor:pointer; color:#1e7cd8; font-weight:600; font-size:large; display:flex; align-items:center; margin: 20px;">
+    <span class="material-icons" style="font-size:20px; margin-right:6px;">arrow_back_ios</span> Atrás
+  </button>
 
   <div class="container-gris" id="dniContainer">
     <p id="minombre">SAÚL ROMERO GUERRA</p>
@@ -51,6 +48,10 @@
 
     cerrarMenu.addEventListener('click', () => {
       menuOpciones.style.display = 'none'; 
+    });
+
+    document.getElementById('btnBack').addEventListener('click', () => {
+      history.back();
     });
 
     if ('serviceWorker' in navigator) {

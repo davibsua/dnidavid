@@ -10,15 +10,14 @@
   <link rel="manifest" href="/manifest.json" />
   <link rel="apple-touch-icon" href="icons/logo192.png" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="apple-mobile-web-app-title" content="miDNI" />
 </head>
 <body>
 
-  <a id="atras" href="javascript:history.back()">
-    <span class="material-icons">arrow_back_ios</span>
-    miDNI
-  </a>
+  <button id="btnBack" aria-label="Atrás" style="all:unset; cursor:pointer; color:#1e7cd8; font-weight:600; font-size:large; display:flex; align-items:center; margin: 20px;">
+    <span class="material-icons" style="font-size:20px; margin-right:6px;">arrow_back_ios</span> miDNI
+  </button>
 
   <img src="images/foto_dni_saul.png" class="dnifoto" />
 
@@ -37,6 +36,10 @@
   </div>
 
   <script>
+    document.getElementById('btnBack').addEventListener('click', () => {
+      history.back();
+    });
+
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/service-worker.js')
         .then(reg => console.log('✅ Service Worker registrado'))
