@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Document</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
   <header>
     <h2 class="tittle">INTEREIDAS</h2>
   </header>
   <p id="subtitle-azul">miDNI</p>
   <p class="subtitle-gris">VERSIÓN 7.2</p>
+
   <div class="container">
     <a href="{% url 'inicio_sesion' %}" class="boton-gris">
       <div class="contenedor-texto-boton">
-        <p class="letra-normal">OBTENER CERTIFICADO DIGITAL</p><br><p class="letra-azul">ACCESO A SEDES ELECTRÓNICAS</p>
-        
+        <p class="letra-normal">OBTENER CERTIFICADO DIGITAL</p>
+        <p class="letra-azul">ACCESO A SEDES ELECTRÓNICAS</p>
       </div>
     </a>
 
@@ -26,25 +25,22 @@
       <p class="letra-normal">DOCUMENTOS EN EL MÓVIL</p>
       <p class="letra-azul">SU DNI, NIE, O PASAPORTE EN EL MÓVIL</p>
     </a>
+
     <a href="{% url 'inicio_sesion' %}" class="boton-gris">
       <p class="letra-normal">COMPROBAR DOCUMENTOS</p>
       <p class="letra-azul">COMPROBACIÓN DESDE PASSKIT</p>
     </a>
   </div>
 
+  <footer id="foote">
+    <p class="subtitle-gris">Soporte técnico:</p>
+    <p class="footer-azul">asistencia@intereidas.com</p>
 
-<footer>
-  <p class="subtitle-gris">Soporte técnico:</p>
-  <p class="footer-azul">asistencia@intereidas.com</p>
+    <div class="video-tutoriales-container">
+      <p class="letra-normal video-tutoriales-text">VIDEO TUTORIALES</p>
+    </div>
 
-  <div class="video-tutoriales-container">
-    <p class="letra-normal video-tutoriales-text">VIDEO TUTORIALES</p>
-  </div>
-
-  <p class="footer-azul">Aviso legal</p>
-</footer>
-
-
+    <p class="footer-azul">Aviso legal</p>
+  </footer>
 </body>
-
 </html>
