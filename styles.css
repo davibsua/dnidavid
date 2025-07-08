@@ -328,10 +328,15 @@ footer p{
 ;
 }
 
-.dnifoto{
-    margin-left:10rem;
-    
+.dnifoto {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: 30vh;         /* 30% de la altura de la pantalla */
+    object-fit: contain;  /* Para que no se deforme */
+    margin: 0 auto 1rem;  /* Centrada horizontalmente y un poco de espacio abajo */
 }
+
 
 .images{
     width: 1rem;
