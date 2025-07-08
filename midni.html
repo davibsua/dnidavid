@@ -1,53 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mi DNI</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>mi DNI</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="apple-touch-icon" href="icons/logo192.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="miDNI" />
 </head>
 <body>
-    
-       <a id="atras" href="javascript:history.back()">
-            <span class="material-icons" style="vertical-align: middle; font-size: 20px; margin-right: 6px;">arrow_back_ios</span>
-            Atrás
-        </a>
+  
+  <a id="atras" href="javascript:history.back()">
+    <span class="material-icons" style="vertical-align: middle; font-size: 20px; margin-right: 6px;">
+      arrow_back_ios
+    </span>
+    Atrás
+  </a>
 
-        
+  <div class="container-gris" id="dniContainer">
+    <p id="minombre">SAÚL ROMERO GUERRA</p>
+    <p>DNI</p>
+    <p id="dninum">NUM: 45396597-W </p>
+  </div>
 
+  <div id="menuOpciones" class="overlay-menu" style="display: none;">
+    <a href="dni.html" class="lightbluebutton">VER DOCUMENTO</a>
+    <a href="#" class="lightbluebutton">GUARDAR EN WALLET</a>
+    <a href="#" class="lightbluebutton">ELIMINAR DOCUMENTO</a>
+    <a href="#" class="cerrar" id="cerrarMenu">Cerrar</a>
+  </div>
 
-    <div class="container-gris" id="dniContainer">
-        <p id="minombre">SAÚL ROMERO GUERRA</p>
-        <p>DNI</p>
-        <p id="dninum">NUM: 45396597-W </p>
-    </div>
-    <div id="menuOpciones" class="overlay-menu" style="display: none;">
-        <a href="dni.html" class="lightbluebutton">VER DOCUMENTO</a>
-        <a href="#" class="lightbluebutton">GUARDAR EN WALLET</a>
-        <a href="#" class="lightbluebutton">ELIMINAR DOCUMENTO</a>
-        <a href="#" class="cerrar" id="cerrarMenu">Cerrar</a>
-    </div>
-    </a>
-    <footer>
-        <a href="#" class="blue-button">+ AÑADIR DOCUMENTO DE IDENTIDAD</a>
-        <a href="#" class="blue-button">COMPROBAR CÓDIGO QR</a>
-    </footer>
-    <script>
-        const dniContainer = document.getElementById('dniContainer'); 
-        const menuOpciones = document.getElementById('menuOpciones');
-        const cerrarMenu = document.getElementById('cerrarMenu');
+  <footer>
+    <a href="#" class="blue-button">+ AÑADIR DOCUMENTO DE IDENTIDAD</a>
+    <a href="#" class="blue-button">COMPROBAR CÓDIGO QR</a>
+  </footer>
 
-        dniContainer.addEventListener('click', () => {
-            menuOpciones.style.display = 'block';
-        });
+  <script>
+    const dniContainer = document.getElementById('dniContainer'); 
+    const menuOpciones = document.getElementById('menuOpciones');
+    const cerrarMenu = document.getElementById('cerrarMenu');
 
-        cerrarMenu.addEventListener('click', (e) => {
-            menuOpciones.style.display = 'none'; 
-        });
-    </script>
-      
-    
+    dniContainer.addEventListener('click', () => {
+      menuOpciones.style.display = 'block';
+    });
+
+    cerrarMenu.addEventListener('click', () => {
+      menuOpciones.style.display = 'none'; 
+    });
+
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js')
+        .then(reg => console.log('✅ Service Worker registrado'))
+        .catch(err => console.error('❌ Error al registrar SW:', err));
+    }
+  </script>
+  
 </body>
 </html>

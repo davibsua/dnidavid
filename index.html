@@ -5,7 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Document</title>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="manifest" href="/manifest.json">
+  <link rel="apple-touch-icon" href="icons/logo192.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="miDNI">
 </head>
+
 <body>
   <header>
     <h2 class="tittle">INTEREIDAS</h2>
@@ -14,7 +20,7 @@
   <p class="subtitle-gris">VERSIÓN 7.2</p>
 
   <div class="container">
-    <a href="{% url 'inicio_sesion' %}" class="boton-gris">
+    <a href="inicio_sesion.html" class="boton-gris">
       <div class="contenedor-texto-boton">
         <p class="letra-normal">OBTENER CERTIFICADO DIGITAL</p>
         <p class="letra-azul">ACCESO A SEDES ELECTRÓNICAS</p>
@@ -26,7 +32,7 @@
       <p class="letra-azul">SU DNI, NIE, O PASAPORTE EN EL MÓVIL</p>
     </a>
 
-    <a href="{% url 'inicio_sesion' %}" class="boton-gris">
+    <a href="inicio_sesion.html" class="boton-gris">
       <p class="letra-normal">COMPROBAR DOCUMENTOS</p>
       <p class="letra-azul">COMPROBACIÓN DESDE PASSKIT</p>
     </a>
@@ -42,5 +48,14 @@
 
     <p class="footer-azul">Aviso legal</p>
   </footer>
+
+  <!-- ✅ Poner aquí el script del Service Worker -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js')
+        .then(reg => console.log('✅ Service Worker registrado'))
+        .catch(err => console.error('❌ Error al registrar SW:', err));
+    }
+  </script>
 </body>
 </html>

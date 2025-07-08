@@ -3,8 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Documento DNI</title>
   <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="apple-touch-icon" href="icons/logo192.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="miDNI" />
 </head>
 <body>
 
@@ -28,6 +35,14 @@
     <p>Valid from: Apr 21 08:07:32 2021 GMT</p>
     <p>Valid to: Jul 21 08:07:32 2031 GMT</p>
   </div>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js')
+        .then(reg => console.log('✅ Service Worker registrado'))
+        .catch(err => console.error('❌ Error al registrar SW:', err));
+    }
+  </script>
 
 </body>
 </html>
