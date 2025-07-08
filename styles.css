@@ -78,18 +78,19 @@ main {
 }
 
 .boton-gris {
-    display: flex !important;
-    align-items: center !important;
-    gap: 10px !important;
-    justify-content: flex-start !important;
-    padding: 12px 20px;
-    color: black;
-    background-color: rgba(218, 218, 218, 0.904); 
-    text-decoration: none; 
-    border-radius: 8px; 
-    margin-top: 15px; 
-    width: 90%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  justify-content: flex-start !important;
+  padding: 12px 20px;
+  color: black;
+  background-color: rgba(218, 218, 218, 0.904); 
+  text-decoration: none; 
+  border-radius: 8px; 
+  margin: 15px auto;
+  width: 90%;
+  max-width: 420px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .icono-boton {
@@ -344,7 +345,7 @@ footer p{
 .dnifoto {
     display: block;
     width: auto;
-    max-width: 100%;
+    max-width: 80%;
     height: 30vh;         /* 30% de la altura de la pantalla */
     object-fit: contain;  /* Para que no se deforme */
     margin: 0 auto 1rem;  /* Centrada horizontalmente y un poco de espacio abajo */
