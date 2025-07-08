@@ -381,3 +381,6 @@ footer p {
   white-space: nowrap;
   font-size: 1rem;
 }
+input, textarea {
+  outline: none;
+}
